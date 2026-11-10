@@ -1,0 +1,232 @@
+@-moz-document url-prefix("https://media.saturn.gal8xy.net") {
+
+/* SATURN - DIRECTV 2006 */
+
+:root {
+    --dtv-blue: #0754b8;
+    --dtv-bright: #1689ef;
+    --dtv-navy: #061b40;
+    --dtv-yellow: #fed24e;
+}
+
+
+/* Receiver-style header */
+.skinHeader {
+    background: linear-gradient(
+        #123d79, #08275a, #041b43
+    ) !important;
+    border-bottom: 2px solid #3c8bdb;
+}
+
+.skinHeader .emby-button {
+    border-radius: 2px !important;
+    color: white !important;
+}
+
+/* Guide background */
+.channelPrograms {
+    background: #023bd7 !important;
+}
+
+/* Time ruler */
+.guide-headerTimeslots {
+    background: linear-gradient(
+        #1676d4, #0750a9
+    ) !important;
+    color: white !important;
+    border-color: #69b5f5 !important;
+    font-weight: bold;
+}
+
+/* Channel column */
+.guide-channelHeaderCell,
+.guideChannelHeaderCell {
+    background: linear-gradient(
+        #031328, #08264f
+    ) !important;
+    border: 1px solid #023bd7 !important;
+    border-radius: 1px !important;
+    color: white !important;
+}
+
+.guideChannelNumber,
+.guideChannelName {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Program listings */
+.programCell {
+    background: linear-gradient(
+        #164f9b, #0a3474
+    ) !important;
+
+    color: white !important;
+    border: 1px solid #4b8ed0 !important;
+    border-radius: 1px !important;
+    margin: 1px !important;
+    box-shadow: inset 0 1px rgba(255,255,255,.12);
+}
+
+/* Currently selected program */
+.programCell-active {
+    background: linear-gradient(
+        #1689ef, #0755b7
+    ) !important;
+    border: 2px solid #fed24e !important;
+}
+
+/* Remote-control focus */
+.programCell:focus,
+.guide-channelHeaderCell:focus {
+    background: linear-gradient(
+        #f4fbff, #b7ddff
+    ) !important;
+    color: #062d64 !important;
+    border: 2px solid #fed24e !important;
+    outline: 2px solid white !important;
+}
+
+.programCell:focus * {
+    color: #062d64 !important;
+}
+
+/* Remove modern rounded UI */
+.programCell,
+.emby-button,
+.emby-input,
+.emby-select {
+    border-radius: 2px !important;
+}
+
+/* Receiver typography */
+#liveTvGuidePage {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+/* Replace Jellyfin header logo */
+.pageTitleWithDefaultLogo {
+    background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/DirecTV_1993.svg/960px-DirecTV_1993.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+}
+
+/* Hide original logo */
+.pageTitleWithDefaultLogo img,
+.pageTitleWithDefaultLogo svg {
+    opacity: 0 !important;
+}
+/* Replace Jellyfin top-left icon with DIRECTV */
+.MuiButton-startIcon img[src*="icon-transparent"] {
+    content: url("https://upload.wikimedia.org/wikipedia/commons/d/d7/DirecTV_1993.svg") !important;
+    max-height: 1.25em !important;
+    max-width: unset !important;
+    width: auto !important;
+}
+/* Rename Saturn-r720 to RICENET TV */
+.MuiButton-root:has(.MuiButton-startIcon img[src*="icon-transparent"]) {
+    font-size: 0 !important;
+}
+
+.MuiButton-root:has(.MuiButton-startIcon img[src*="icon-transparent"])::after {
+    content: "RICENET TV";
+    font-size: 1rem;
+    visibility: visible;
+}
+/* RICENET TV - Sitewide typography */
+@import url('https://fonts.googleapis.com/css2?family=Tahoma&display=swap');
+
+body,
+button,
+input,
+select,
+textarea,
+.MuiTypography-root,
+.MuiButton-root {
+    font-family: Tahoma, Arial, sans-serif !important;
+}
+/* RICENET TV - Navigation bar */
+.MuiToolbar-root.MuiToolbar-dense {
+    background-color: #e6ecff !important;
+    background-image: none !important;
+    border-bottom: 1px solid #daf6ff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+/* RICENET TV - Black navigation text and icons */
+.MuiToolbar-root.MuiToolbar-dense a,
+.MuiToolbar-root.MuiToolbar-dense button,
+.MuiToolbar-root.MuiToolbar-dense svg,
+.MuiToolbar-root.MuiToolbar-dense span {
+    color: #171717 !important;
+    fill: #171717 !important;
+}
+
+/* Ensure SVG icons stay black */
+.MuiToolbar-root.MuiToolbar-dense svg path {
+    fill: #171717 !important;
+}
+/* RICENET TV - DIRECTV blue accents */
+
+/* Active navigation tab */
+.MuiToolbar-root a[aria-current="page"],
+.MuiToolbar-root a.MuiButton-textPrimary {
+    color: #0876bd !important;
+}
+
+/* Active tab underline */
+.MuiToolbar-root a.MuiButton-textPrimary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: #0876bd;
+}
+
+/* Hover effects */
+.MuiToolbar-root a:hover,
+.MuiToolbar-root button:hover {
+    color: #0876bd !important;
+}
+
+/* Navigation bar bottom accent */
+.MuiToolbar-root.MuiToolbar-dense {
+    border-bottom: 2px solid #0876bd !important;
+}
+/* RICENET TV - DIRECTV cyan guide dates */
+
+/* Date selection background */
+.guideHeaderDateSelection {
+    background: #00AEEF !important;
+}
+
+/* Date tabs */
+.guideDateTabs,
+.guideDateTabsSlider {
+    background: #00AEEF !important;
+}
+
+/* Individual date buttons */
+.guide-date-tab-button {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+/* Date text */
+.guide-date-tab-button .emby-button-foreground {
+    color: #ffffff !important;
+}
+
+/* Selected date */
+.guide-date-tab-button.emby-tab-button-active {
+    background: #0077B5 !important;
+    color: #ffffff !important;
+    border-bottom: 3px solid #ffffff !important;
+}
+
+/* Hover */
+.guide-date-tab-button:hover {
+    background: #0095D9 !important;
+}
+}
